@@ -7,7 +7,7 @@ bot.on('ready', function () {
     bot.user.setActivity('rien').catch(console.error)
 });
 
-client.on('message', message => {
+bot.on('message', message => {
   if (!message.guild) return;
     
   if (message.content.startsWith('*ban')) {
