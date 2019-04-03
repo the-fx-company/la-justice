@@ -15,7 +15,7 @@ bot.on('message', message => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-          dit logs').then(() => {
+          member.kick('Optional reason that will display in the audit logs').then(() => {
           message.reply(`Successfully kicked ${user.tag}`);
         }).catch(err => {
           message.reply('Sheh, t\'es kick');
