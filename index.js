@@ -55,7 +55,7 @@ bot.on('message', message => {
   }
 });
 
-guild.unban('some user ID')
+bot.unban('some user ID')
   .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
   .catch(console.error);
 
