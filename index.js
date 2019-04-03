@@ -31,6 +31,7 @@ bot.on('message', msg => {
     }
     if (msg.content.match(/salut/i)) {
             msg.reply('Je suis d\'accord avec toi.')
+    }
 
 });
 
