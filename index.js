@@ -55,14 +55,4 @@ bot.on('message', message => {
   }
 });
 
-bot.on('message', message => {
-    if (!message.guild) return;
-    
-    if (message.content.startsWith('*unban')) {
-    guild.unban('some user ID')
-  .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
-  .catch(console.error);
-    }
-};
-
 bot.login(token);
