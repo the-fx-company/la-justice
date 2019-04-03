@@ -9,6 +9,29 @@ bot.on('ready', function () {
 
 bot.on('message', message => {
   if (!message.guild) return;
+
+  if (message.content.startsWith('*kick')) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+          dit logs').then(() => {
+          message.reply(`Successfully kicked ${user.tag}`);
+        }).catch(err => {
+          message.reply('Sheh, t\'es kick');
+          console.error(err);
+        });
+      } else {
+        message.reply('That user isn\'t in this guild!');
+      }
+    } else {
+      message.reply('YTu dois mentionner la personne que tu veux kick !');
+    }
+  }
+});
+
+bot.on('message', message => {
+  if (!message.guild) return;
     
   if (message.content.startsWith('*ban')) {
     const user = message.mentions.users.first();
