@@ -55,4 +55,29 @@ bot.on('message', message => {
   }
 });
 
+bot.on('message', message => {
+    if (!message.guild) return;
+    
+    if (message.content.startsWith('*unban')) {
+        const user = message.mentions.users.first();
+        if (user) {
+            const member = message.guild.member(user);
+            if (member) {
+                member.unban({
+                    reason: 'rebienvenue dans le serv !',
+                }).then(() => {
+                    message.reply(`Successfully unbanned ${user.tag}`);
+                }).catch(err => {
+                    message.reply('L\'utilisateur a bien été débanni !');
+                    console.error(err);
+                });
+            } else {
+                message.reply('That user isn\'t in this guild!');
+            }
+        } else {
+            message.reply('Tu dois mentionner la personne que tu veux débannir !');
+        }
+    }
+});
+
 bot.login(token);
