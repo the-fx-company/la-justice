@@ -7,7 +7,7 @@ bot.on('ready', function () {
     bot.user.setActivity('bannir').catch(console.error)
 });
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '*help') {
     const embed = new RichEmbed()
       .setTitle('Voici les commandes que le bot peut éxecuter')
