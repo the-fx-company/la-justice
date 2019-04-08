@@ -2,11 +2,11 @@ const { Client, RichEmbed } = require('discord.js');
 const client = new Client();
 const token = process.env.token
 
-Client.on('ready', function () {
+client.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('bannir').catch(console.error)
 });
-Client.on('message', message => {
+client.on('message', message => {
   // If the message is "how to embed"
   if (message.content === 'how to embed') {
     // We can create embeds using the MessageEmbed constructor
@@ -24,7 +24,7 @@ Client.on('message', message => {
   }
 });
 
-Client.on('message', message => {
+client.on('message', message => {
   if (!message.guild) return;
 
   if (message.content.startsWith('*kick')) {
@@ -47,7 +47,7 @@ Client.on('message', message => {
   }
 });
 
-Client.on('message', message => {
+client.on('message', message => {
   if (!message.guild) return;
     
   if (message.content.startsWith('*ban')) {
@@ -72,4 +72,4 @@ Client.on('message', message => {
   }
 });
 
-Client.login(token);
+client.login(token);
