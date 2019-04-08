@@ -4,7 +4,7 @@ const token = process.env.token
 
 client.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('bannir').catch(console.error)
+    client.user.setActivity('bannir').catch(console.error)
 });
 client.on('message', message => {
   // If the message is "how to embed"
