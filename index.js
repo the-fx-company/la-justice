@@ -7,6 +7,21 @@ bot.on('ready', function () {
     bot.user.setActivity('bannir').catch(console.error)
 });
 
+client.on('message', message => {
+  if (message.content === '*help') {
+    const embed = new RichEmbed()
+      .setTitle('Voici les commandes que le bot peut éxecuter')
+      .setColor(0xFF0000)
+      .setTitle('*help')
+      .setDescription('affiche les différentes commandes')
+      .setTitle('*ban')
+      .setDescription('banni la personne mentionné')
+      .setTitle('*kick')
+      .setDescrption('expulse la personne mentionné du serveur');
+    message.channel.send(embed);
+  }
+});
+
 bot.on('message', message => {
   if (!message.guild) return;
 
@@ -25,7 +40,7 @@ bot.on('message', message => {
         message.reply('That user isn\'t in this guild!');
       }
     } else {
-      message.reply('YTu dois mentionner la personne que tu veux kick !');
+      message.reply('Tu dois mentionner la personne que tu veux kick !');
     }
   }
 });
