@@ -7,19 +7,17 @@ client.on('ready', function () {
     client.user.setActivity('bannir').catch(console.error)
 });
 client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === 'how to embed') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+  if (message.content === '*help') {
     const embed = new RichEmbed()
-      // Set the title of the field
-      .setTitle('A slick little embed')
-      // Set the color of the embed
+      .setTitle('*help')
       .setColor(0xFF0000)
-      // Set the main content of the embed
-      .setDescription('Hello, this is a slick embed!');
-    // Send the embed to the same channel as the message
+      .setDescription('affiche les commandes d\'aide (comme si tu le savais pas FDP)')
+      .setTitle('kick')
+      .setColor(0xFF0000)
+      .setDescription('expulse la personne mentionné (sheh connard !)')
+      .setTitle('ban')
+      .setColor(0xFF0000)
+      .setDescription('banni la personne metionné (putain, c\'est un mot transparent, tu devarais le savoir quand même)')
     message.channel.send(embed);
   }
 });
