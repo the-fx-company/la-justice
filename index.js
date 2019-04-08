@@ -17,7 +17,7 @@ client.on('message', message => {
       .setDescription('expulse la personne mentionné (sheh connard !)')
       .setTitle('ban')
       .setColor(0xFF0000)
-      .setDescription('banni la personne metionné (putain, c\'est un mot transparent, tu devarais le savoir quand même)')
+      .setDescription('banni la personne metionné (putain, c\'est un mot transparent, tu devarais le savoir quand même)');
     message.channel.send(embed);
   }
 });
