@@ -11,10 +11,12 @@ client.on('message', message => {
     const embed = new RichEmbed()
       .setTitle('*help')
       .setColor(0xFF0000)
-      .setDescription('affiche les commandes d\'aide (comme si tu le savais pas FDP)')
+      .setDescription('affiche les commandes d\'aide (comme si tu le savais pas FDP)');
+    message.channel.send(embed);
       .setTitle('kick')
       .setColor(0xFF0000)
-      .setDescription('expulse la personne mentionné (sheh connard !)')
+      .setDescription('expulse la personne mentionné (sheh connard !)');
+    message.channel.send(embed);
       .setTitle('ban')
       .setColor(0xFF0000)
       .setDescription('banni la personne metionné (putain, c\'est un mot transparent, tu devarais le savoir quand même)');
