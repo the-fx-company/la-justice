@@ -43,7 +43,7 @@ client.on('message', message => {
         }).then(() => {
           message.reply(`Successfully banned ${user.tag}`);
         }).catch(err => {
-          message.reply('L\'utilisateur a bien été banni !');
+          message.reply('L\'utilisateur a bien été banni ! Faut pas faire le malin avec moi!');
           console.error(err);
         });
       } else {
