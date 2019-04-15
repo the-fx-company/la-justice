@@ -18,7 +18,7 @@ client.on('message', message => {
           member.kick('Optional reason that will display in the audit logs').then(() => {
           message.reply(`Successfully kicked ${user.tag}`);
         }).catch(err => {
-          message.reply('Sheh, t\'es kick');
+          message.reply('Cheh, t\'es kick');
           console.error(err);
         });
       } else {
@@ -39,7 +39,7 @@ client.on('message', message => {
       const member = message.guild.member(user);
       if (member) {
         member.ban({
-          reason: 'Parce que c\'est pas gentil d\'être méchant !!!!!!!',
+          reason: 'Parce que c\'est pas gentil d\'être méchant !!!!!!! Et n\'oubliez jamais d\'apprendre de vos erreurs! :wink:',
         }).then(() => {
           message.reply(`Successfully banned ${user.tag}`);
         }).catch(err => {
