@@ -25,7 +25,7 @@ client.on('message', message => {
         message.reply('That user isn\'t in this guild!');
       }
     } else {
-      message.reply('Tu dois mentionner la personne que tu veux kick !');
+      message.reply('vous devez mentionner la personne que vous voulez kick ! Sinon cela ne fonctionnera pas :/.');
     }
   }
 });
@@ -50,7 +50,7 @@ client.on('message', message => {
         message.reply('That user isn\'t in this guild!');
       }
     } else {
-      message.reply('Tu dois mentionner la personne que tu veux bannir ! Sinon cela ne fonctionnera pas :/!');
+      message.reply('vous devez mentionner la personne que vous voulez bannir ! Sinon cela ne fonctionnera pas :/.');
     }
   }
 });
