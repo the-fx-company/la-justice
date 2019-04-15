@@ -43,14 +43,14 @@ client.on('message', message => {
         }).then(() => {
           message.reply(`Successfully banned ${user.tag}`);
         }).catch(err => {
-          message.reply('L\'utilisateur a bien été banni ! Faut pas faire le malin avec moi!');
+          message.reply('l\'utilisateur a bien été banni ! Faut pas faire le malin avec moi!');
           console.error(err);
         });
       } else {
         message.reply('That user isn\'t in this guild!');
       }
     } else {
-      message.reply('Tu dois mentionner la personne que tu veux bannir !');
+      message.reply('Tu dois mentionner la personne que tu veux bannir ! Sinon cela ne fonctionnera pas :/!');
     }
   }
 });
