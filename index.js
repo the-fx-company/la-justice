@@ -57,9 +57,6 @@ client.on('message', message => {
 
 client.login(token);
 client.on('message', message => {
-    if (!message.guild) return;
-    
-    if (message.content.startsWith('*mute')) {
-      const user = message.mentions.users.first();
-      TU
+    'je suis prêt :)'
+})
         
