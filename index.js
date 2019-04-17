@@ -18,7 +18,7 @@ client.on('message', message => {
           member.kick('Optional reason that will display in the audit logs').then(() => {
           message.reply(`Successfully kicked ${user.tag}`);
         }).catch(err => {
-          message.reply('Cheh, t\'es kick');
+          message.reply('And his name is JOHN CENA! T\'es kick');
           console.error(err);
         });
       } else {
@@ -56,3 +56,10 @@ client.on('message', message => {
 });
 
 client.login(token);
+client.on('message', message => {
+    if (!message.guild) return;
+    
+    if (message.content.startsWith('*mute')) {
+      const user = message.mentions.users.first();
+      TU
+        
