@@ -16,9 +16,9 @@ client.on('message', message => {
       const member = message.guild.member(user);
       if (member) {
           member.kick('Optional reason that will display in the audit logs').then(() => {
-          message.reply(`Successfully kicked ${user.tag}`);
+          message.reply("And his name is JOHN CENA! T'es kick");
         }).catch(err => {
-          message.reply('And his name is JOHN CENA! T\'es kick');
+          message.reply("Vous n'avez pas l'autorisation de kick ce membre");
           console.error(err);
         });
       } else {
