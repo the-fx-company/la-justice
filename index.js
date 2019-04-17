@@ -41,9 +41,9 @@ client.on('message', message => {
         member.ban({
           reason: 'Parce que c\'est pas gentil d\'être méchant !!!!!!! Et n\'oubliez jamais d\'apprendre de vos erreurs! :wink:',
         }).then(() => {
-          message.reply(`Successfully banned ${user.tag}`);
+          message.reply("l'utilisateur a bien été banni ! Faut pas faire le malin avec moi!");
         }).catch(err => {
-          message.reply('l\'utilisateur a bien été banni ! Faut pas faire le malin avec moi!');
+          message.reply("Désolé, tu n'as pas l'autorisation de bannir ce membre");
           console.error(err);
         });
       } else {
