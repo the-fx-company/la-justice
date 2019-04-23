@@ -15,14 +15,14 @@ client.on('message', message => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-          member.kick('Optional reason that will display in the audit logs').then(() => {
+          member.kick("Ce membre a été kick car il n'était pas sage").then(() => {
           message.reply("And his name is JOHN CENA! T'es kick https://youtu.be/XgUB3lF9IQA");
         }).catch(err => {
           message.reply("Vous n'avez pas l'autorisation de kick ce membre");
           console.error(err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
       message.reply('vous devez mentionner la personne que vous voulez kick ! Sinon cela ne fonctionnera pas :/.');
@@ -39,7 +39,7 @@ client.on('message', message => {
       const member = message.guild.member(user);
       if (member) {
         member.ban({
-          reason: 'Parce que c\'est pas gentil d\'être méchant !!!!!!! Et n\'oubliez jamais d\'apprendre de vos erreurs! :wink:',
+          reason: "Parce que c'est pas gentil d'être méchant !!!!!!! Et n'oubliez jamais d'apprendre de vos erreurs! :wink:",
         }).then(() => {
           message.reply("l'utilisateur a bien été banni ! Faut pas faire le malin avec moi!");
         }).catch(err => {
@@ -47,16 +47,16 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply("That user isn't in this guild!");
       }
     } else {
-      message.reply('vous devez mentionner la personne que vous voulez bannir ! Sinon cela ne fonctionnera pas :/.');
+      message.reply("Vous devez mentionner la personne que vous voulez bannir ! Sinon cela ne fonctionnera pas :/.");
     }
   }
 });
 
 client.login(token);
 client.on('message', message => {
-    'je suis prêt :)'
+    "je suis prêt :)"
 })
         
