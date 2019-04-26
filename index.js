@@ -53,6 +53,36 @@ client.on('message', message => {
       message.reply("Vous devez mentionner la personne que vous voulez bannir ! Sinon cela ne fonctionnera pas :/.");
     }
   }
+)};
+    
+client.on('message', message => {
+if (!message.guild) return;
+    if (message.content.startWith('*jugement')) {
+      const user = message.mentions.users.first();
+      if (user) {
+          const member = message.guild.member(user);
+          if (member) {
+              const int a = 0, b = 1;
+              int rand_a_b(int a, int b) {
+              nombreMystere = rand()%(b-a) +a;
+                  if (nombreMystere === b) {
+                      member.ban({
+                          reason: "à été juger et banni.",
+                      }).then(() => {
+                          message.reply(member "à été juger est banni !");
+                      }).catch(err => {
+                          message.reply("je ne peux pas bannir ce membre");
+                          console.error(err);
+                      });
+                  } else {
+                      message.reply("Tu as de la chance, tu peux rester parmi nous :wink:");
+                  }
+              } else {
+                  message.reply("That user isn't in this guild!");
+              }
+          } else {
+              message.reply("Vous devez mentionner la personne que vous voulez juger");
+          }
 });
 
 client.login(token);
